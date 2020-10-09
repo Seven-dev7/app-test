@@ -1,4 +1,18 @@
-<h1>Liste des pays </h1>
-<% @countries.each do |country| %>
-    <%= country.country_name%><br>
-<%end%>
+
+<div class="container">
+    <h1 class="text-center">Tableau des pays</h1>
+        <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Nom du pays</th>
+            </tr>
+        </thead>
+        <% @countries.each do |country| %>
+        <tbody>
+            <tr>
+                <td><%= country.country_name%></td>
+            </tr>
+        </tbody>
+        <%end%>
+    </table>
+</div>
