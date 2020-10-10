@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2020_10_09_143242) do
   end
 
   create_table "embassies", force: :cascade do |t|
+    t.string "in_country"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
