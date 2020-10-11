@@ -1,0 +1,22 @@
+<div class="container">
+    <h1 class="text-center m-4 p-3">Tableau des pays</h1>
+        <table class="table table-hover table-sm">
+        <thead>
+            <tr>
+                <th class="text-center">Pays</th>
+                <th class="text-center">Latitude</th>
+                <th class="text-center">Longitude</th>
+                <th class="text-center">Coordonnées GPS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center"><%= @embassy.in_country %></td>
+                <td class="text-center"><%= @embassy.latitude %></td>
+                <td class="text-center"><%= @embassy.longitude %></td>
+                <td class="text-center"><%= @embassy.gps %></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

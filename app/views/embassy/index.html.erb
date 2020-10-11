@@ -1,0 +1,22 @@
+<p>
+    <%= link_to 'Accueil', root_path, class: 'btn btn-primary' %>
+</p>
+
+<div class="container">
+    <h1 class="text-center m-4 p-3">Tableau des Ambassades</h1>
+        <table class="table table-hover table-sm">
+        <thead>
+            <tr>
+                <th>Nom du pays(FR)</th>
+            </tr>
+        </thead>
+        <% @embassies.each do |embassy| %>
+        <tbody>
+            <tr>
+                <td><%= link_to "#{embassy.in_country}", embassy_path(embassy.id) %></td>
+            </tr>
+        </tbody>
+        <%end%>
+    </table>
+</div>
+
