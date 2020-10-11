@@ -1,0 +1,8 @@
+<h1> Tous les pays</h1>
+
+<% @countries.each do |country|%>
+    <div>
+        <%= link_to "#{country.name_fr}", country_path(country.id), class: 'btn btn-primary'%>
+    </div>
+<%end%>
+

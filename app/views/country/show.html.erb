@@ -1,0 +1,36 @@
+<%= link_to 'Retour', country_index_path, class:'btn btn-primary'%>
+<h1>Country#show</h1>
+
+    <div> 
+        <br><%= @country.code %>
+        <%= @country.alpha_2 %>
+        <%= @country.alpha_3 %>
+        <%= @country.name_fr %>
+        <%= @country.name_en %><br>
+    </div>
+<br>
+<hr>
+
+    <div>
+        <% @foreigner_data.each do |foreigner| %>
+            <div> <%= foreigner.year %>
+            <%= foreigner.number_of_french %></div>
+        <%end%>
+    </div>
+
+<hr>
+
+    <div>
+        <% @embassies.each do |embassy| %>
+            <div> 
+                latitude : <%= embassy.latitude %><br>
+                longitude :<%= embassy.longitude %><br>
+                Coordonnées GPS : <%= embassy.gps %>
+            </div>
+            <hr>
+        <%end%>
+    </div>
+
+
+
+

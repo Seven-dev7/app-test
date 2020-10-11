@@ -5,6 +5,7 @@ ruby '2.6.6'
 
 gem 'table_print', '~> 1.5', '>= 1.5.6'
 
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 # Use postgresql as the database for Active Record
@@ -35,6 +36,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
   gem 'factory_bot', '~> 4.8', '>= 4.8.2'
+  gem 'pry', '~> 0.10.3'
 end
 
 group :development do
