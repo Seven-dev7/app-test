@@ -2,7 +2,7 @@
 * Delete ` username: postgres password: ouss ` from default in database.yml.
 
 * run `rails db:create db:migrate`.
-* run `rake import_data`.
+* run `rake import:all`.
 * run `rails s`.
 
 

@@ -1,3 +1,4 @@
 class Country < ApplicationRecord
-    has_and_belongs_to_many 
+    has_many :embassies
+    has_many :foreigners
 end

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'country/index'
+  get 'country/show'
   root to: "display#index"
   resources :display, only: [:index, :show]
   resources :country, only: [:index, :show]

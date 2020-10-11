@@ -5,6 +5,7 @@ class CreateEmbassies < ActiveRecord::Migration[6.0]
       t.float :latitude
       t.float :longitude
       t.float :gps
+      t.belongs_to :country
       t.timestamps
     end
   end
