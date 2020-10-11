@@ -16,13 +16,20 @@ ActiveRecord::Schema.define(version: 2020_10_09_143242) do
   enable_extension "plpgsql"
 
   create_table "countries", force: :cascade do |t|
-    t.string "country_name"
+    t.integer "code"
+    t.string "alpha_2"
+    t.string "alpha_3"
+    t.string "name_fr"
+    t.string "name_en"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "embassies", force: :cascade do |t|
     t.string "in_country"
+    t.float "latitude"
+    t.float "longitude"
+    t.float "gps"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
