@@ -1,12 +1,12 @@
 
 <div class="container">
-    <h1 class="text-center m-4 p-3">Tableau des pays</h1>
+    <h1 class="text-center m-4 p-3">Tableau des Ambassades</h1>
         <table class="table table-hover table-sm">
         <thead>
             <tr>
                 <th class="text-center">Code pays</th>
-                <th class="text-center">N° Alpha 2</th>
-                <th class="text-center">N° Alpha 3</th>
+                <th class="text-center">Code Alpha 2</th>
+                <th class="text-center">Code Alpha 3</th>
                 <th class="text-center">Nom du pays en Francais</th>
                 <th class="text-center">Nom du pays en Anglais</th>
             </tr>
@@ -17,7 +17,7 @@
                 <td class="text-center"><%= country.code%></td>
                 <td class="text-center"><%= country.alpha_2%></td>
                 <td class="text-center"><%= country.alpha_3%></td>
-                <td class="text-center"><%= country.name_fr%></td>
+                <td class="text-center"><%= link_to "#{country.name_fr}", display_path(@embassies) %></td>
                 <td class="text-center"><%= country.name_en%></td>
             </tr>
         </tbody>
