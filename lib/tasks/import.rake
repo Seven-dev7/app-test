@@ -47,7 +47,7 @@ namespace :import do
             data = row[0].split(';')
             begin
                 country = Country.all.detect{ |country| country.name_fr.downcase == data[0].downcase }
-                Foreigner.create!(country_name: data[0], year: data[1], number_of_french: data[2], country_id: country.id)
+                Foreigner.create!(country_name: data[0], year: data[1], number_of_french: data[2], foreignable_id: country.id, foreignable_type: 'Country')
                 counter2 +=1
             rescue => e
                 p e

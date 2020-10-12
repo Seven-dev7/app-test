@@ -40,8 +40,9 @@ ActiveRecord::Schema.define(version: 2020_10_11_110349) do
     t.string "country_name"
     t.integer "year"
     t.integer "number_of_french"
-    t.bigint "country_id"
-    t.index ["country_id"], name: "index_foreigners_on_country_id"
+    t.string "foreignable_type"
+    t.bigint "foreignable_id"
+    t.index ["foreignable_type", "foreignable_id"], name: "index_foreigners_on_foreignable_type_and_foreignable_id"
   end
 
 end
