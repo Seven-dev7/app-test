@@ -1,8 +1,20 @@
-<h1> Tous les pays</h1>
+<%= link_to 'Accueil', root_path, class:'btn btn-success'%>
 
-<% @countries.each do |country|%>
-    <div>
-        <%= link_to "#{country.name_fr}", country_path(country.id), class: 'btn btn-primary'%>
-    </div>
-<%end%>
+<div class="container">
+    <h1 class="text-center m-4 p-3">Listes des Pays</h1>
+        <table class="table table-hover table-sm">
+        <thead>
+            <tr>
+                <th>Nom du pays(FR)</th>
+            </tr>
+        </thead>
+        <% @countries.each do |country|%>
+        <tbody>
+            <tr>
+                <td><%= link_to "#{country.name_fr}", country_path(country.id), class: ''%></td>
+            </tr>
+        </tbody>
+        <%end%>
+    </table>
+</div>
 
