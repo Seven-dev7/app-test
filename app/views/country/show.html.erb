@@ -1,38 +1,27 @@
 <%= link_to 'Retour', country_index_path, class:'btn btn-primary'%>
 
 <div class="container">
-    <div class="card">
-        <div class="card-body">
-            <h1 class="card-header">Country#show</h1>        
-                <div> 
-                    <br><%= @country.code %>
-                    <%= @country.alpha_2 %>
-                    <%= @country.alpha_3 %>
-                    <%= @country.name_fr %>
-                    <%= @country.name_en %><br>
-                </div>
-            <br>
-            <hr>
-                <div>
-                    <% @foreigner_data.each do |foreigner| %>
-                        <div> <%= foreigner.year %>
-                        <%= foreigner.number_of_french %></div>
-                    <%end%>
-                </div>
-            <hr>
-                <div>
-                    <% @embassies.each do |embassy| %>
-                        <div> 
-                            latitude : <%= embassy.latitude %><br>
-                            longitude :<%= embassy.longitude %><br>
-                            Coordonnées GPS : <%= embassy.gps %>
-                        </div>
-                        <hr>
-                    <%end%>
-                </div>
+    <div class="row">
+        <div class="card">
+            <div class="card-body w-100 p-5">
+                <h1 class="card-header text-center mb-3"><%= @country.name_fr %>.</h1>        
+                    <div>
+                        <%= render partial: 'layouts/countryinfo', locals: {country: @country} %>
+                    </div>
+                <br>
+                <hr>
+                    <div>
+                        <%= render partial: 'layouts/foreigndata', locals: {country: @foreigner_data} %>
+                    </div>
+                    <hr>
+                    <div>
+                        <%= render partial: 'layouts/embassiesdata', locals: {country: @embassies} %>
+                    </div>
+            </div>
         </div>
     </div>
 </div>
+
 
 
 

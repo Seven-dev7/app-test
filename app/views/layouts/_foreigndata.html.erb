@@ -1,0 +1,10 @@
+<h2 class="text-center mb-3"> Nombre de Francais expatriés / année</h2>
+    <ul class="nav nav-tabs">
+        <% @foreigner_year.sort.each do |fy| %>
+            <li class="nav-item">
+                <p class="nav-link active">
+                    <%= fy%>
+                </p>
+            </li>
+        <%end%>
+    </ul>

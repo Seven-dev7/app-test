@@ -1,0 +1,10 @@
+<h3 class="text-center"> Ambassades Data </h3>
+
+<% @embassies.each do |embassy| %>
+<div> 
+    latitude : <%= embassy.latitude %><br>
+    longitude :<%= embassy.longitude %><br>
+    Coordonnées GPS : <%= embassy.gps %>
+</div>
+<hr>
+<%end%>
