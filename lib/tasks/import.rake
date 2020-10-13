@@ -22,10 +22,13 @@ namespace :import do
         CSV.foreach(filename) do |row|
             next if row == CSV.foreach(filename).first
             counter += 1
-            data = row[0].split(';')
+            p '%'*20
+            p data = row[0].split(';')
+            p '%%'*20
             begin
-                country = Country.all.detect{ |country| country.name_fr.downcase == data[1].downcase }
-                Embassy.create!(in_country: data[1], latitude: data[2], longitude: data[3], gps: data[4], country_id: country.id)
+                p '##'*20
+                p country = Country.all.detect{ |country| country.name_fr.downcase == data[1].downcase }
+                #Embassy.create!(in_country: data[1], latitude: data[2], longitude: data[3], gps: data[4], country_id: country.id)
                 counter2 += 1
             rescue => e
                 p e
