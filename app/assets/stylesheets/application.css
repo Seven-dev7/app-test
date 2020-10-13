@@ -35,11 +35,21 @@ body::before {
     background-color: rgb(174, 146, 175);
 }
 
+.landing {
+    position: relative;
+}
+.btn-landing {
+    height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
 a {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 a:hover {
-    color: rgb(93, 41, 95);
+    color: rgb(191, 50, 196);
     text-decoration: none;
 }
