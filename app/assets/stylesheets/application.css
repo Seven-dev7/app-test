@@ -54,3 +54,7 @@ a:hover {
 .country {
     margin-top: 20%;
 }
+#map {
+    width: 100%;
+    height: 300px;
+}
