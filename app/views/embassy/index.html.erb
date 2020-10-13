@@ -10,7 +10,7 @@
                 <th>Nom du pays(FR)</th>
             </tr>
         </thead>
-        <% @embassies.each do |embassy| %>
+        <% @embassies.sort.each do |embassy| %>
         <tbody>
             <tr>
                 <td><%= link_to "#{embassy.in_country}", embassy_path(embassy.id) %></td>
