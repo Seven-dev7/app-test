@@ -28,8 +28,11 @@ namespace :import do
             counter += 1
             data = row[0].split(';')
             begin
-                country = Country.all.detect{ |country| country.name_fr.parameterize == data[1].parameterize }
-                Embassy.create!(in_country: data[1], latitude: data[2], longitude: data[3], gps: data[4], country_id: country.id)
+                country = Country.all.detect do |country|
+                    p /#{country.name_fr.parameterize}/i.match("#{data[0].parameterize}")
+                end
+                #p { |country| country.name_fr.parameterize == data[1].parameterize }
+                #Embassy.create!(in_country: data[1], latitude: data[2], longitude: data[3], gps: data[4], country_id: country.id)
                 counter2 += 1
             rescue => e
                 p e
