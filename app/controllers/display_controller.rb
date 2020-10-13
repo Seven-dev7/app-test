@@ -5,6 +5,5 @@ class DisplayController < ApplicationController
   end
 
   def show
-    @embassies = Embassy.all
   end
 end
