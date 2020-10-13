@@ -6,7 +6,7 @@
 <%= link_to 'Retour', country_index_path, class:'btn btn-primary'%>
 
 <div class="container">
-    <div class="row col-lg-12 col-md-8 col-sm-10">
+    <div class="row ml-5">
         <div class="card">
             <div class="card-body p-5">
                 <h1 class="card-header text-center mb-3"><%= @country.name_fr %>.</h1>        
@@ -22,6 +22,17 @@
                     <div class="card-text">
                         <%= render partial: 'layouts/embassiesdata', locals: {country: @embassies} %>
                     </div>
+                    <div class="card-text">
+                        <div id="map" style='width: 800px; height: 400px;'></div>
+                    </div>    
+                        <script>
+                            handler = Gmaps.build('Google');
+                            handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+                                markers = handler.addMarkers(<%=raw @hash.to_json %>);
+                                handler.bounds.extendWith(markers);
+                                handler.fitMapToBounds();
+                            });
+                        </script>
             </div>
         </div>
     </div>
